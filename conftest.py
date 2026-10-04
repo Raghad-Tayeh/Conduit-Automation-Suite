@@ -1,13 +1,13 @@
-from playwright.sync_api import Page, Playwright
-from pytest_playwright.pytest_playwright import playwright
+import pytest
+from playwright.sync_api import Page
 
 URL = "https://demo.realworld.show/"
 
-def browser_launch(playwright: Playwright, page: Page):
-    chromium = playwright.chromium.launch(headless=False)
+@pytest.fixture
+def browser_launch(page: Page):
     page.goto(URL)
-    yield chromium
-    chromium.close()
+    yield page
+
 
 
 
