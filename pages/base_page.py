@@ -6,13 +6,13 @@ class BasePage:
         self.page.goto(url)
 
     def click(self, locator):
-        self.page.locator(locator).click()
+        locator.click()
 
     def hover(self, locator):
-        self.page.locator(locator).hover()
+        locator.hover()
 
     def scroll(self, locator):
-        self.page.locator(locator).scroll()
+        locator.scroll()
 
     def fill(self, locator, text):
-        self.page.locator(locator).fill(text)
+        locator.fill(text)
