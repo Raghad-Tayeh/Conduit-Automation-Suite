@@ -1,4 +1,4 @@
-import sign_up_data_feeder as data_feeder
+from data_feeders import sign_up_data_feeder as data_feeder
 from pages import sign_up_page as signup_page
 
 def test_user_can_sign_up(browser_launch):
