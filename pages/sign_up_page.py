@@ -11,8 +11,6 @@ class SignUpPage(BasePage):
         self.password_field = page.get_by_placeholder("Password")
         self.signup_button = page.get_by_role("button", name= re.compile("Sign up", re.IGNORECASE))
 
-    sign_up_credentials = signup.sign_up_feeder()
-
     def signup(self, username, email, password):
         self.click(self.signup_nav_link)
         self.fill(self.username_field, username)
