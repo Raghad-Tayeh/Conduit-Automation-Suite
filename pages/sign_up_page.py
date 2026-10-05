@@ -1,5 +1,4 @@
 from pages.base_page import BasePage
-import sign_up_data_feeder as signup
 import re
 
 class SignUpPage(BasePage):
